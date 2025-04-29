@@ -1,0 +1,261 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background:rgb(23, 79, 135);
+    color: white;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 18px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgb(0, 27, 47);
+    padding: 1rem 2rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .nav-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin-left: 2rem;
+  }
+  
+  .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+    margin: 40px;
+    /* background: white; */
+  }
+  
+  .profile-image img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .profile-info {
+    text-align: left;
+    font-size: 30px;
+  }
+  
+  /* Sections */
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .projects-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+  }
+  
+  .project-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: black;
+  }
+  .project-card p {
+    text-align: justify;
+    margin-top: 5px;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Timeline */
+  .timeline {
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 20px;
+    border-left: 2px solid #0077cc;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 1rem;
+  }
+  
+  .timeline-content {
+    text-align: left;
+  }
+  
+  /* Contact */
+  .social-media a {
+    margin: 0 1rem;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .social-media img {
+    width: 35px;
+    margin-top: 10px;
+  }
+
+  .alamat {
+    margin-top: 5px;
+    font-size:17px;
+  }
+  
+  /* Footer */
+  .footer {
+    background:rgb(0, 41, 47);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Animation */
+  .animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s all ease;
+  }
+  
+  .animate.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .profile-info {
+      font-size:25px;
+    }
+  
+    .profile-image {
+      margin-top: 2rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background: #0077cc;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 150px;
+      border-radius: 10px;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .nav-menu li {
+      margin: 1rem 0;
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .header {
+        padding: 40px 30px;
+    }
+
+    .profile-info {
+        font-size: 14px;
+        /* padding: 0px; */
+    }
+
+    .profile-image img {
+      width: 330px;
+      height: 330px;
+    }
+
+    .social-media img {
+        width: 25px;
+        margin-top: 10px;
+      }
+  }
+  
